@@ -1,0 +1,1109 @@
+<!DOCT
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberShield Academy | Ethical Hacking</title>
+    <meta
+      name="description"
+      content="منصة تعليمية احترافية في مجال الأمن السيبراني والهكر الأخلاقي، مع مسارات تعليمية عملية ومتقدمة."
+    />
+      <!-- Arabic fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cyber: {
+                bg: '#070b13',
+                panel: '#0d1420',
+                panel2: '#121b2a',
+                line: '#1f2f46',
+                green: '#7CFF8A',
+                cyan: '#6EE7FF',
+                blue: '#5aa6ff',
+                red: '#ff5a6e',
+              },
+            },
+            boxShadow: {
+              neon: '0 0 20px rgba(124,255,138,0.35)',
+              cyan: '0 0 20px rgba(110,231,255,0.28)',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --bg: #070b13;
+        --panel: #0d1420;
+        --panel-2: #121b2a;
+        --line: #1f2f46;
+        --green: #7cff8a;
+        --cyan: #6ee7ff;
+        --blue: #5aa6ff;
+        --purple: #8b5cf6;
+        --text: #eaf7ff;
+        --muted: #9aaec2;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at top, rgba(91, 166, 255, 0.18), transparent 22%),
+          radial-gradient(circle at 80% 10%, rgba(124, 255, 138, 0.11), transparent 18%),
+          linear-gradient(180deg, #04090f 0%, #0a101b 100%);
+        color: var(--text);
+        font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+      }
+
+      .glass {
+        background: linear-gradient(180deg, rgba(17, 24, 39, 0.78), rgba(10, 16, 24, 0.8));
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(110, 231, 255, 0.15);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 18px 40px rgba(2,6,23,0.45);
+      }
+
+      .neon-border {
+        border: 1px solid rgba(124, 255, 138, 0.38);
+        box-shadow: 0 0 0 1px rgba(124, 255, 138, 0.18), 0 0 24px rgba(124, 255, 138, 0.16), 0 18px 40px rgba(15, 23, 42, 0.6);
+      }
+
+      .hero-grid {
+        position: relative;
+        background-image:
+          linear-gradient(120deg, rgba(5, 10, 18, 0.94), rgba(12, 22, 34, 0.8)),
+          url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+
+      .hero-grid::before,
+      .hero-grid::after {
+        content: "";
+        position: absolute;
+        inset: auto;
+        border-radius: 9999px;
+        filter: blur(80px);
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      .hero-grid::before {
+        width: 320px; height: 320px;
+        right: 10%; top: 10%;
+        background: rgba(110, 231, 255, 0.14);
+      }
+
+      .hero-grid::after {
+        width: 260px; height: 260px;
+        left: 8%; bottom: 10%;
+        background: rgba(124, 255, 138, 0.1);
+      }
+
+      .code-glow {
+        text-shadow: 0 0 10px rgba(124, 255, 138, 0.5), 0 0 22px rgba(110, 231, 255, 0.32);
+      }
+
+      .section-tag {
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #7de7ff;
+      }
+
+      .elite-card {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(180deg, rgba(12, 18, 28, 0.9), rgba(9, 13, 20, 0.82));
+        border: 1px solid rgba(110, 231, 255, 0.2);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 18px 40px rgba(2,6,23,0.42);
+      }
+
+      .elite-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(circle, rgba(110,231,255,0.16), transparent 70%);
+        pointer-events: none;
+      }
+
+      .metric-card {
+        background: linear-gradient(180deg, rgba(12, 18, 28, 0.95), rgba(10, 16, 24, 0.88));
+        border: 1px solid rgba(110, 231, 255, 0.16);
+        box-shadow: 0 14px 30px rgba(2, 6, 23, 0.35);
+      }
+
+      .metric-number {
+        text-shadow: 0 0 18px rgba(110, 231, 255, 0.35), 0 0 18px rgba(124,255,138,0.2);
+      }
+
+      .cyber-pill {
+        border: 1px solid rgba(124, 255, 138, 0.3);
+        background: rgba(15, 23, 35, 0.7);
+        box-shadow: inset 0 0 18px rgba(124,255,138,0.05), 0 0 18px rgba(124,255,138,0.08);
+      }
+
+      .cyber-cta {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(124,255,138,1), rgba(110,231,255,1));
+        box-shadow: 0 0 25px rgba(110, 231, 255, 0.35), 0 0 35px rgba(124,255,138,0.2);
+      }
+
+      .cyber-cta::before {
+        content: "";
+        position: absolute;
+        inset: -30% 35% auto -20%;
+        height: 180%;
+        transform: rotate(18deg);
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+      }
+
+      .cyber-cta:hover {
+        filter: brightness(1.06);
+        transform: translateY(-2px);
+      }
+
+      .card-hover {
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 0 1px rgba(124, 255, 138, 0.2), 0 18px 35px rgba(2, 6, 23, 0.5);
+        border-color: rgba(124, 255, 138, 0.4);
+        background: linear-gradient(180deg, rgba(15, 23, 35, 0.92), rgba(10, 17, 29, 0.88));
+      }
+
+      .pricing-card {
+        position: relative;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .pricing-card.featured {
+        background: linear-gradient(180deg, rgba(15, 23, 35, 0.98), rgba(7, 12, 18, 0.92));
+        border: 1px solid rgba(124, 255, 138, 0.4);
+        box-shadow: 0 0 0 1px rgba(124,255,138,0.15), 0 20px 42px rgba(8, 15, 25, 0.55);
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .grid-pattern {
+        background-image: linear-gradient(rgba(110, 231, 255, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(110, 231, 255, 0.06) 1px, transparent 1px);
+        background-size: 26px 26px;
+      }
+
+      .floating-card {
+        animation: float 5s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+
+      .faq-item {
+        border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 160px;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-[#050b13]/80 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-3">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl border border-cyan-400/60 bg-cyan-500/10 text-lg shadow-[0_0_20px_rgba(110,231,255,0.30)]">
+            <span class="font-black text-cyan-300">C</span>
+          </div>
+          <div>
+            <p class="text-lg font-extrabold tracking-wide text-white">CyberShield</p>
+            <p class="text-[10px] tracking-[0.25em] text-slate-400">ACADEMY</p>
+          </div>
+        </div>
+
+        <div class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+          <a href="#about" class="transition hover:text-cyan-300">من نحن</a>
+          <a href="#courses" class="transition hover:text-cyan-300">المسارات</a>
+          <a href="#features" class="transition hover:text-cyan-300">المزايا</a>
+          <a href="#testimonials" class="transition hover:text-cyan-300">التقييمات</a>
+          <a href="#signup" class="transition hover:text-cyan-300">الاشتراك</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="#signup" class="cyber-cta rounded-full px-5 py-2.5 text-sm font-bold text-slate-950">انضم الآن</a>
+          <button id="loginBtn" class="rounded-full border border-slate-700 bg-slate-900/50 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">تسجيل الدخول</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-grid relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(124,255,138,0.08),_transparent_35%)]"></div>
+        <div class="relative mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-28">
+          <div class="flex flex-col justify-center">
+            <div class="cyber-pill mb-6 inline-flex w-fit items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium text-green-200">
+              <span class="h-2 w-2 rounded-full bg-green-400 shadow-[0_0_12px_rgba(124,255,138,0.9)]"></span>
+              أكاديمية الأمن السيبراني والاختبارات العملية
+            </div>
+
+            <h1 class="code-glow max-w-2xl text-4xl font-black leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+              احترف الأمن السيبراني والهكر الأخلاقي من الصفر إلى الاحتراف
+            </h1>
+
+            <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+              اكتسب مهارات الحماية الرقمية، اختبر الثغرات بطريقة أخلاقية، وابدأ مسارك في مجال الأمن السيبراني من خلال محتوى عملي، مشاريع حقيقية، ودعم مستمر.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="#signup" class="cyber-cta inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-black text-slate-950">
+                اشترك الآن
+              </a>
+              <a href="#courses" class="inline-flex items-center justify-center rounded-full border border-slate-600 bg-slate-900/60 px-6 py-3 text-base font-bold text-slate-100 transition hover:border-cyan-400 hover:text-cyan-300">
+                استعرض المسارات
+              </a>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-3 text-sm text-slate-200">
+              <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-2 shadow-[0_0_18px_rgba(110,231,255,0.08)]">⚡ تعلم عملي</span>
+              <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-2 shadow-[0_0_18px_rgba(110,231,255,0.08)]">🔐 أمان أخلاقي</span>
+              <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-2 shadow-[0_0_18px_rgba(110,231,255,0.08)]">💡 مشاريع حقيقية</span>
+            </div>
+
+            <div class="mt-10 grid max-w-lg grid-cols-3 gap-4 text-center">
+              <div class="metric-card rounded-2xl p-4">
+                <div class="metric-number text-2xl font-black text-green-300">12K+</div>
+                <div class="mt-1 text-xs text-slate-400">طالب متدرب</div>
+              </div>
+              <div class="metric-card rounded-2xl p-4">
+                <div class="metric-number text-2xl font-black text-cyan-300">45+</div>
+                <div class="mt-1 text-xs text-slate-400">محاضرة</div>
+              </div>
+              <div class="metric-card rounded-2xl p-4">
+                <div class="metric-number text-2xl font-black text-blue-300">94%</div>
+                <div class="mt-1 text-xs text-slate-400">نسبة رضا</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative flex items-center justify-center">
+            <div class="grid-pattern absolute inset-6 rounded-[2rem] opacity-40"></div>
+            <div class="floating-card relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-cyan-400/20 bg-slate-950/80 p-2 shadow-[0_0_40px_rgba(59,130,246,0.22)]">
+              <div class="rounded-[1.5rem] border border-slate-700 bg-slate-950/90 p-4">
+                <div class="mb-4 flex items-center justify-between border-b border-slate-700 pb-3">
+                  <div class="flex items-center gap-2">
+                    <span class="h-3 w-3 rounded-full bg-red-400"></span>
+                    <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+                    <span class="h-3 w-3 rounded-full bg-green-400"></span>
+                  </div>
+                  <span class="text-[10px] tracking-[0.22em] text-slate-400">terminal / lab</span>
+                </div>
+
+                <div class="space-y-2 font-mono text-sm text-slate-200">
+                  <p class="text-cyan-300">$ whoami</p>
+                  <p class="text-green-300">ethical_hacker@cybershield</p>
+                  <p class="text-slate-300">$ nmap 10.0.0.1 -sV</p>
+                  <p class="text-green-300">[+] Port 443 open | SSL Enabled</p>
+                  <p class="text-slate-300">$ sqlmap --risk=3 --level=5</p>
+                  <p class="text-green-300">[+] Auth bypass check completed</p>
+                  <p class="text-slate-300">$ cat /path/learning-roadmap.txt</p>
+                  <p class="text-cyan-300"># Network • Web • Red Team • Defense</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ملاحظات سريعة عن مسار التعلم -->
+      <section class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div class="glass rounded-2xl border border-slate-700 p-6">
+          <h4 class="text-lg font-bold text-white">ملاحظات سريعة: طريقة التعلم</h4>
+          <ul class="mt-3 text-slate-300 space-y-2">
+            <li>• ابدأ بالأساسيات ثم انتقل للتطبيق عملياً في المختبر.</li>
+            <li>• خصص وقت أسبوعي للممارسة وتوثيق ما تعلمته.</li>
+            <li>• أنهِ مشروعًا صغيرًا لكل مسار لتثبت المهارة.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- شرح مبسّط للمسارات -->
+      <section class="bg-slate-950/30 py-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="glass rounded-2xl border border-slate-700 p-6">
+            <h4 class="text-lg font-bold text-white">ملخص المسارات</h4>
+            <ul class="mt-3 text-slate-300 space-y-2">
+              <li>• أساسيات الشبكات: فهم الطبقات، البروتوكولات، والتوجيه بشكل عملي.</li>
+              <li>• اختبار التغلغل: تعلم أدوات الفحص، استغلال الثغرات، وتوثيق النتائج.</li>
+              <li>• أمن الويب: تحليل تطبيقات الويب، اكتشاف XSS وSQLi، وطرق الحماية.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ملحق: دروس مقترحة لكل قسم -->
+      <section class="bg-[#07121b] py-6">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="glass rounded-2xl border border-slate-700 p-6">
+            <h4 class="text-lg font-bold text-white">دروس مقترحة قصيرة</h4>
+            <ul class="mt-3 text-slate-300 space-y-2">
+              <li>• للشبكات: مارس تكوين شبكة محلية وافهم الـ IP وSubnet.</li>
+              <li>• للينوكس: ابدأ بأوامر الملفات والأذونات وتمارين على الطرفية.</li>
+              <li>• لأمن الويب: جرب سيناريوهات XSS وSQLi مع بيئة محمية.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- شرح مبسّط لقسم المزايا -->
+      <section class="bg-[#0a1018] py-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="glass rounded-2xl border border-slate-700 p-6">
+            <h4 class="text-lg font-bold text-white">شرح مبسّط: مزايا المنصة</h4>
+            <p class="mt-3 text-slate-300">تعرف على نقاط القوة بسرعة: مسارات منظمة، مختبرات عملية، محتوى مدعوم، ومجتمع تفاعلي.</p>
+            <ul class="mt-3 text-slate-300 space-y-2">
+              <li>• درس 1: كيف تختار المسار المناسب بناءً على هدفك.</li>
+              <li>• درس 2: أهمية التطبيق العملي في المختبرات.</li>
+              <li>• درس 3: الاستفادة من المجتمع والدعم.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+        <!-- شرح مبسط لقسم من نحن -->
+        <section class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+          <div class="glass rounded-2xl border border-slate-700 p-6">
+            <h4 class="text-lg font-bold text-white">شرح مبسّط: عن المنصة</h4>
+            <ul class="mt-3 text-slate-300 space-y-2">
+              <li>• درس 1: ما هو الأمن السيبراني؟ — فهم هدف وحماية الأنظمة.</li>
+              <li>• درس 2: الأخلاقيات المهنية — لماذا نعمل بمسؤولية وأمان.</li>
+              <li>• درس 3: الأدوات الأساسية — نظرة سريعة على أدوات المختبر.</li>
+            </ul>
+          </div>
+        </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="grid gap-4 md:grid-cols-4">
+          <div class="metric-card rounded-2xl p-5 text-center">
+            <div class="metric-number text-3xl font-black text-green-300">200+</div>
+            <p class="mt-2 text-sm text-slate-300">تمارين عملية</p>
+          </div>
+          <div class="metric-card rounded-2xl p-5 text-center">
+            <div class="metric-number text-3xl font-black text-cyan-300">14</div>
+            <p class="mt-2 text-sm text-slate-300">مسار تدريبي</p>
+          </div>
+          <div class="metric-card rounded-2xl p-5 text-center">
+            <div class="metric-number text-3xl font-black text-blue-300">8K</div>
+            <p class="mt-2 text-sm text-slate-300">مستخدم نشط</p>
+          </div>
+          <div class="metric-card rounded-2xl p-5 text-center">
+            <div class="metric-number text-3xl font-black text-emerald-300">24/7</div>
+            <p class="mt-2 text-sm text-slate-300">دعم المجتمع</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="mb-10 text-center">
+          <p class="text-sm font-semibold tracking-[0.2em] text-cyan-300">من نحن</p>
+          <h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">نبذة عن المنصة</h2>
+        </div>
+
+        <div class="glass rounded-2xl border border-slate-700 p-6 mb-6">
+          <h4 class="text-lg font-bold text-white">دروس سريعة: عن المنصة</h4>
+          <ul class="mt-3 text-slate-300 space-y-2">
+            <li>• درس قصير: فهم هدف المنصة وكيفية الاستفادة من المسارات.</li>
+            <li>• درس عملي: كيف تبدأ أول مشروع وتوثقه.</li>
+            <li>• نصيحة: اختيار الموارد المناسبة حسب مستوى المتعلم.</li>
+          </ul>
+        </div>
+
+        <div class="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
+          <div class="glass neon-border rounded-[2rem] p-8">
+            <div class="mb-6 flex items-center gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/10 text-2xl shadow-neon">🛡️</div>
+              <h3 class="text-2xl font-bold text-white">أهدافنا التعليمية</h3>
+            </div>
+
+            <p class="text-slate-300 leading-8">
+              نقدم محتوى عملي ومتدرج يساعدك على بناء أساس قوي في الأمن السيبراني، من مفاهيم الشبكات الأساسية إلى تقنيات اختبار التغلغل، مع التركيز على السلوك الأخلاقي، الأمن المسؤول، والتعلم القائم على المشاريع والمهارات الذهنية.
+            </p>
+
+            <ul class="mt-8 space-y-4 text-slate-200">
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-green-400 shadow-[0_0_12px_rgba(124,255,138,0.7)]"></span>
+                <span>تعليم عملي مع سيناريوهات واقعية ومواقف أمنية حقيقية.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(110,231,255,0.7)]"></span>
+                <span>تجهيز المتدرب للوظائف التقنية ومجالات الأمن الرقمي والمختبرات.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(90,166,255,0.7)]"></span>
+                <span>بنية تعليمية قوية تجمع بين النظرية والممارسة وتطوير مهارات حل المشكلات.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="glass rounded-[1.75rem] border border-slate-700 p-6">
+              <p class="text-3xl font-black text-green-300">100%</p>
+              <p class="mt-3 text-slate-300">محتوى عملي موجه للمبتدئين والمتقدمين</p>
+            </div>
+            <div class="glass rounded-[1.75rem] border border-slate-700 p-6">
+              <p class="text-3xl font-black text-cyan-300">24/7</p>
+              <p class="mt-3 text-slate-300">وصول مرن إلى الدروس والمواد التعليمية</p>
+            </div>
+            <div class="glass rounded-[1.75rem] border border-slate-700 p-6 sm:col-span-2">
+              <p class="text-3xl font-black text-blue-300">Hands-on</p>
+              <p class="mt-3 text-slate-300">مشاريع وأدوات حقيقية تساعدك على تطوير مهاراتك في البيئة الحقيقية</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="bg-[#0a1018] py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <p class="section-tag text-sm font-semibold">لماذا نحن؟</p>
+            <h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">مزايا المنصة وأدواتها</h2>
+          </div>
+
+          <div class="glass rounded-2xl border border-slate-700 p-6 mb-6">
+            <h4 class="text-lg font-bold text-white">دروس سريعة: المزايا</h4>
+            <ul class="mt-3 text-slate-300 space-y-2">
+              <li>• درس: كيف تختار الميزة التي تناسب هدفك التعليمي.</li>
+              <li>• عملي: تجربة مختبر بسيط يوضح قيمة الأدوات.</li>
+              <li>• تنفيذ: كيفية استخدام الموارد للحصول على أفضل تعلم.</li>
+            </ul>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-4">
+            <div class="card-hover elite-card rounded-[1.75rem] p-6">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/10 text-2xl">🧠</div>
+              <h3 class="text-xl font-bold text-white">تعلم منظم</h3>
+              <p class="mt-3 text-slate-300 leading-7">مسارات واضحة من المبتدئ إلى الاحتراف مع تقييمات تقدمية.</p>
+            </div>
+            <div class="card-hover elite-card rounded-[1.75rem] p-6">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-2xl">🧪</div>
+              <h3 class="text-xl font-bold text-white">مختبرات عملية</h3>
+              <p class="mt-3 text-slate-300 leading-7">تجارب واقعية داخل بيئات محاكاة تساعدك على اكتساب الخبرة.</p>
+            </div>
+            <div class="card-hover elite-card rounded-[1.75rem] p-6">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">📚</div>
+              <h3 class="text-xl font-bold text-white">دروس مصممة</h3>
+              <p class="mt-3 text-slate-300 leading-7">محتوى متكامل مدعوم بالملفات، الملاحظات، ومراجع عملية.</p>
+            </div>
+            <div class="card-hover elite-card rounded-[1.75rem] p-6">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-2xl">🤝</div>
+              <h3 class="text-xl font-bold text-white">مجتمع متفاعل</h3>
+              <p class="mt-3 text-slate-300 leading-7">خدمة دعم، أسئلة، تحديات، ومشاركة خبرات بين المتدربين.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lessons" class="bg-[#07121b] py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <p class="text-sm font-semibold tracking-[0.2em] text-green-300">دروس للمبتدئين</p>
+            <h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">ابدأ رحلتك من الصفر مع فيديوهات تعليمية حقيقية</h2>
+          </div>
+
+          <div class="glass rounded-2xl border border-slate-700 p-6 mb-6">
+            <h4 class="text-lg font-bold text-white">دروس سريعة: للمبتدئين</h4>
+            <ul class="mt-3 text-slate-300 space-y-2">
+              <li>• درس 1: مفاهيم أساسية تحتاجها قبل مشاهدة الدروس.</li>
+              <li>• درس 2: إعداد بيئة مختبر افتراضي بسيط للعمل العملي.</li>
+              <li>• درس 3: كيف تتابع المحتوى وتطبق ما تعلمته في مشروع صغير.</li>
+            </ul>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div class="col-span-4">
+              <div class="mb-6 flex items-center justify-between">
+                <div>
+                  <label for="courseSearch" class="text-sm text-slate-300">بحث في المسارات</label>
+                  <input id="courseSearch" type="search" placeholder="ابحث باسم المسار أو المستوى" class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-2 text-slate-100 outline-none" />
+                </div>
+                <div class="ml-4">
+                  <button id="openVideoDemo" class="inline-flex items-center rounded-full border border-green-400/40 bg-green-500/10 px-4 py-2 text-sm font-bold text-green-200" data-video="https://www.youtube.com/embed/7VMvcmYg6sA">تشغيل عرض الدروس داخل المنصة</button>
+                </div>
+              </div>
+            </div>
+            <article class="card-hover glass rounded-[1.75rem] border border-slate-700 p-6">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/10 text-2xl">🔐</div>
+              <h3 class="text-xl font-bold text-white">ما هو الأمن السيبراني؟</h3>
+              <p class="mt-3 text-slate-300 leading-7">مقدمة مبسطة تساعدك على فهم المجال، الأنواع، والأهداف الأمنية بشكل صحيح.</p>
+              <a href="https://www.youtube.com/results?search_query=cyber+security+for+beginners" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center rounded-full border border-green-400/40 bg-green-500/10 px-4 py-2 text-sm font-bold text-green-200 transition hover:bg-green-500/20">فتح الفيديو</a>
+            </article>
+
+            <article class="card-hover glass rounded-[1.75rem] border border-slate-700 p-6">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-2xl">🌐</div>
+              <h3 class="text-xl font-bold text-white">أساسيات الشبكات</h3>
+              <p class="mt-3 text-slate-300 leading-7">تعلم البروتوكولات، العناوين، التوجيه، ونظام التشغيل الشبكي بطريقة سهلة.</p>
+              <a href="https://www.youtube.com/results?search_query=computer+networking+for+beginners" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center rounded-full border border-cyan-400/40 bg-cyan-500/10 px-4 py-2 text-sm font-bold text-cyan-200 transition hover:bg-cyan-500/20">فتح الفيديو</a>
+            </article>
+
+            <article class="card-hover glass rounded-[1.75rem] border border-slate-700 p-6">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">💻</div>
+              <h3 class="text-xl font-bold text-white">Linux للمبتدئين</h3>
+              <p class="mt-3 text-slate-300 leading-7">تعرف على أوامر النظام، الملفات، والأوامر الأساسية التي تستخدمها في المختبرات.</p>
+              <a href="https://www.youtube.com/results?search_query=linux+for+beginners+tutorial" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center rounded-full border border-blue-400/40 bg-blue-500/10 px-4 py-2 text-sm font-bold text-blue-200 transition hover:bg-blue-500/20">فتح الفيديو</a>
+            </article>
+
+            <article class="card-hover glass rounded-[1.75rem] border border-slate-700 p-6">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-2xl">🛡️</div>
+              <h3 class="text-xl font-bold text-white">أمن الويب للمبتدئين</h3>
+              <p class="mt-3 text-slate-300 leading-7">فهم الثغرات والشروحات الأساسية مثل XSS وSQL Injection وطرق الحماية.</p>
+              <a href="https://www.youtube.com/results?search_query=web+security+for+beginners" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-500/10 px-4 py-2 text-sm font-bold text-emerald-200 transition hover:bg-emerald-500/20">فتح الفيديو</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="courses" class="bg-slate-950/50 py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <p class="text-sm font-semibold tracking-[0.2em] text-green-300">المسارات التعليمية</p>
+            <h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">اختر المسار المناسب لك</h2>
+          </div>
+
+          <div class="glass rounded-2xl border border-slate-700 p-6 mb-6">
+            <h4 class="text-lg font-bold text-white">دروس سريعة: المسارات</h4>
+            <ul class="mt-3 text-slate-300 space-y-2">
+              <li>• كيفية قراءة وصف المسار واختيار مستوى مناسب.</li>
+              <li>• تقسيم المسار إلى أهداف أسبوعية قابلة للقياس.</li>
+              <li>• تمرين عملي بسيط لكل مسار لبناء المحفظة.</li>
+            </ul>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-3">
+            <article class="card-hover glass neon-border rounded-[2rem] p-6">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-500/10 text-2xl shadow-neon">🌐</div>
+              <h3 class="text-2xl font-bold text-white">أساسيات الشبكات</h3>
+              <p class="mt-4 text-slate-300 leading-8">
+                تعلم طبقات الشبكة، البروتوكولات، التوجيه، وإدارة الشبكات بطريقة احترافية وعمليّة.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-slate-700 pt-4">
+                <span class="text-sm text-green-300">مستوى: مبتدئ</span>
+                <span class="text-sm text-slate-400">4 أسابيع</span>
+              </div>
+            </article>
+
+            <article class="card-hover glass neon-border rounded-[2rem] p-6">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-500/10 text-2xl shadow-cyan">🧪</div>
+              <h3 class="text-2xl font-bold text-white">اختبار التغلغل</h3>
+              <p class="mt-4 text-slate-300 leading-8">
+                اكتشف نقاط الضعف بشكل أخلاقي، استخدم أدوات مثل Nmap وMetasploit، وطبّق تقنيات الكشف والدفاع.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-slate-700 pt-4">
+                <span class="text-sm text-cyan-300">مستوى: متوسط</span>
+                <span class="text-sm text-slate-400">6 أسابيع</span>
+              </div>
+            </article>
+
+            <article class="card-hover glass neon-border rounded-[2rem] p-6">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10 text-2xl shadow-[0_0_20px_rgba(90,166,255,0.35)]">🛡️</div>
+              <h3 class="text-2xl font-bold text-white">أمن الويب</h3>
+              <p class="mt-4 text-slate-300 leading-8">
+                تعلم اختبارات الأمان في تطبيقات الويب، وتسربات البيانات، XSS، SQL Injection، وطرق الحماية المهنية.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-slate-700 pt-4">
+                <span class="text-sm text-blue-300">مستوى: متقدم</span>
+                <span class="text-sm text-slate-400">8 أسابيع</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="text-sm font-semibold tracking-[0.2em] text-cyan-300">كيف تتعلم معنا؟</p>
+          <h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">رحلة عملية من البداية إلى الاحتراف</h2>
+        </div>
+
+        <div class="glass rounded-2xl border border-slate-700 p-6 mb-6">
+          <h4 class="text-lg font-bold text-white">دروس سريعة: طريقة التعلم</h4>
+          <ul class="mt-3 text-slate-300 space-y-2">
+            <li>• درس: بناء خطة تعلم شخصية أسبوعية.</li>
+            <li>• عملي: سجل تقدمك ودوّن التحديات والحلول.</li>
+            <li>• نصيحة: شارك في المجتمع واطلب مراجعات لمشاريعك.</li>
+          </ul>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="glass rounded-[1.75rem] border border-slate-700 p-7">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-500/10 text-xl font-bold text-green-300">01</div>
+            <h3 class="text-xl font-bold text-white">بناء الأساس</h3>
+            <p class="mt-4 text-slate-300 leading-8">تعرف على مفاهيم الأمن، الخصوصية، الشبكات، والبنية التحتية الرقمية.</p>
+          </div>
+
+          <div class="glass rounded-[1.75rem] border border-slate-700 p-7">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-xl font-bold text-cyan-300">02</div>
+            <h3 class="text-xl font-bold text-white">التدريب العملي</h3>
+            <p class="mt-4 text-slate-300 leading-8">طبق ما تعلمته باستخدام أدوات مجانية، مختبرات افتراضية، ومشاريع واقعية.</p>
+          </div>
+
+          <div class="glass rounded-[1.75rem] border border-slate-700 p-7">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 text-xl font-bold text-blue-300">03</div>
+            <h3 class="text-xl font-bold text-white">الاحتراف</h3>
+            <p class="mt-4 text-slate-300 leading-8">طور مهاراتك في التفكير النقدي، تحليل الثغرات، الحماية، والدفاع السيبراني.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="bg-[#0b111a] py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <p class="text-sm font-semibold tracking-[0.2em] text-cyan-300">آراء المتدربين</p>
+            <h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">ماذا يقول طلابنا؟</h2>
+          </div>
+
+          <div class="glass rounded-2xl border border-slate-700 p-6 mb-6">
+            <h4 class="text-lg font-bold text-white">دروس سريعة: تجارب المتدربين</h4>
+            <ul class="mt-3 text-slate-300 space-y-2">
+              <li>• درس: كيف تستفيد من تجارب الآخرين لتسريع تقدمك.</li>
+              <li>• عملي: اطّلع على مشاريع المتدربين وحاول تحسينها.</li>
+              <li>• نصيحة: طلب ملاحظات بنّاءة وأخذ النقد بشكل إيجابي.</li>
+            </ul>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-3">
+            <div class="glass rounded-[1.75rem] border border-slate-700 p-6">
+              <div class="mb-5 flex items-center gap-3">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-green-500/10 text-lg font-bold text-green-300">م</div>
+                <div>
+                  <p class="font-bold text-white">محمد</p>
+                  <p class="text-xs text-slate-400">مبتدئ</p>
+                </div>
+              </div>
+              <p class="text-slate-300 leading-8">“أفضل شيء في المنصة هو التطبيق العملي، فقد بدأت من الصفر وبدأت أتعامل مع المفاهيم بشكل صحيحة وبطريقة منطقية.”</p>
+            </div>
+            <div class="glass rounded-[1.75rem] border border-slate-700 p-6">
+              <div class="mb-5 flex items-center gap-3">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-lg font-bold text-cyan-300">س</div>
+                <div>
+                  <p class="font-bold text-white">سارة</p>
+                  <p class="text-xs text-slate-400">مهتمة بالأمن</p>
+                </div>
+              </div>
+              <p class="text-slate-300 leading-8">“التعلم هنا ليس مجرد فيديوهات؛ هو رحلة عملية تبرز لك التطبيقات الحقيقية في مجال الأمن السيبراني وتحميك من الأخطاء.”</p>
+            </div>
+            <div class="glass rounded-[1.75rem] border border-slate-700 p-6">
+              <div class="mb-5 flex items-center gap-3">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 text-lg font-bold text-blue-300">ي</div>
+                <div>
+                  <p class="font-bold text-white">ياسر</p>
+                  <p class="text-xs text-slate-400">طالب متقدم</p>
+                </div>
+              </div>
+              <p class="text-slate-300 leading-8">“أحببت التركيز على أخلاقيات الاختراق، وهذا ما يجعل التعلم يختلف عن غيره، لأنك تعرف كيف تحمي وليس فقط كيف تهاجم.”</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="mb-8 text-center">
+          <p class="text-sm font-semibold tracking-[0.2em] text-cyan-300">مصادر تعليمية حقيقية</p>
+          <h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">روابط فيديوهات تعليمية موثوقة</h2>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+          <a href="https://www.youtube.com/watch?v=7VMvcmYg6sA" target="_blank" rel="noopener noreferrer" class="card-hover glass rounded-[1.75rem] border border-slate-700 p-6 block">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/10 text-2xl">🎥</div>
+            <h3 class="text-xl font-bold text-white">Cyber Security Full Course</h3>
+            <p class="mt-3 text-slate-300 leading-7">دورة واسعة ومفيدة لتجهيز المبتدئين لفهم الأمن السيبراني بشكل متكامل.</p>
+          </a>
+
+          <a href="https://www.youtube.com/watch?v=qiQR5rTSshw" target="_blank" rel="noopener noreferrer" class="card-hover glass rounded-[1.75rem] border border-slate-700 p-6 block">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-2xl">🎯</div>
+            <h3 class="text-xl font-bold text-white">Networking Basics</h3>
+            <p class="mt-3 text-slate-300 leading-7">شرح مبسط ومباشر للشبكات، البروتوكولات، والهوية التشغيلية للأنظمة.</p>
+          </a>
+
+          <a href="https://www.youtube.com/watch?v=3Kq1MIfTWCE" target="_blank" rel="noopener noreferrer" class="card-hover glass rounded-[1.75rem] border border-slate-700 p-6 block">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">🧰</div>
+            <h3 class="text-xl font-bold text-white">Linux for Beginners</h3>
+            <p class="mt-3 text-slate-300 leading-7">أوامر Linux الأساسية وتطبيقاتها في المختبرات والأمن السيبراني.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="text-sm font-semibold tracking-[0.2em] text-green-300">خطتنا</p>
+          <h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">باقات الاشتراك</h2>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+          <div class="pricing-card glass rounded-[1.75rem] p-7">
+            <p class="text-sm font-semibold text-cyan-300">Starter</p>
+            <h3 class="mt-3 text-4xl font-black text-white">مجاني</h3>
+            <ul class="mt-6 space-y-3 text-slate-300">
+              <li>• الوصول إلى 3 دورات أساسية</li>
+              <li>• مكتبة ملفات أولية</li>
+              <li>• دعم اجتماعي</li>
+            </ul>
+            <button class="mt-8 w-full rounded-xl border border-slate-600 px-4 py-3 font-bold text-slate-100">ابدأ الآن</button>
+          </div>
+
+          <div class="pricing-card featured rounded-[1.75rem] p-7">
+            <p class="text-sm font-semibold text-green-300">Pro</p>
+            <h3 class="mt-3 text-4xl font-black text-white">149<span class="text-lg text-slate-400"> ر.س</span></h3>
+            <ul class="mt-6 space-y-3 text-slate-200">
+              <li>• جميع المسارات التعليمية</li>
+              <li>• مختبرات كاملة</li>
+              <li>• شارات ومشاريع</li>
+              <li>• دعم مباشر</li>
+            </ul>
+            <button class="mt-8 w-full rounded-xl bg-gradient-to-r from-green-400 to-cyan-400 px-4 py-3 font-bold text-slate-950">اختر الباقة</button>
+          </div>
+
+          <div class="pricing-card glass rounded-[1.75rem] p-7">
+            <p class="text-sm font-semibold text-blue-300">Elite</p>
+            <h3 class="mt-3 text-4xl font-black text-white">299<span class="text-lg text-slate-400"> ر.س</span></h3>
+            <ul class="mt-6 space-y-3 text-slate-300">
+              <li>• كل المزايا السابقة</li>
+              <li>• جلسات خاصة</li>
+              <li>• تقييمات شخصية</li>
+              <li>• شهادة احترافية</li>
+            </ul>
+            <button class="mt-8 w-full rounded-xl border border-slate-600 px-4 py-3 font-bold text-slate-100">تواصل معنا</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="text-sm font-semibold tracking-[0.2em] text-cyan-300">الأسئلة الشائعة</p>
+          <h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">الأسئلة المتكررة</h2>
+        </div>
+
+        <div class="mx-auto max-w-4xl space-y-4">
+          <div class="faq-item active glass rounded-2xl px-6 py-4">
+            <button class="faq-toggle flex w-full items-center justify-between text-right text-lg font-semibold text-white">
+              <span>هل المنصة مناسبة للمبتدئين؟</span>
+              <span class="text-cyan-300">+</span>
+            </button>
+            <div class="faq-answer pb-2 pt-4 text-slate-300">
+              نعم، المنصة مصممة خصيصاً للمبتدئين مع مسارات تدريجية تبدأ من الأساسيات وصولاً إلى الاحتراف.
+            </div>
+          </div>
+
+          <div class="faq-item glass rounded-2xl px-6 py-4">
+            <button class="faq-toggle flex w-full items-center justify-between text-right text-lg font-semibold text-white">
+              <span>هل يوجد محتوى عملي؟</span>
+              <span class="text-cyan-300">+</span>
+            </button>
+            <div class="faq-answer pb-2 pt-4 text-slate-300">
+              نعم، كل دورة تعتمد على تمارين ومشاريع عملية وتجارب حقيقية داخل مختبرات محاكاة.
+            </div>
+          </div>
+
+          <div class="faq-item glass rounded-2xl px-6 py-4">
+            <button class="faq-toggle flex w-full items-center justify-between text-right text-lg font-semibold text-white">
+              <span>هل يمكنني الانضمام من الهاتف؟</span>
+              <span class="text-cyan-300">+</span>
+            </button>
+            <div class="faq-answer pb-2 pt-4 text-slate-300">
+              نعم، تصميم المنصة متجاوب بالكامل، ويعمل بشكل ممتاز على الهاتف، اللوحي، والكمبيوتر.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+        <div class="glass neon-border rounded-[2rem] p-8">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p class="section-tag text-sm font-semibold">ابدأ اليوم</p>
+              <h3 class="mt-3 text-3xl font-black text-white">تعلم من خلال فيديوهات حقيقية وتطبيقات عملية</h3>
+            </div>
+            <a href="https://www.youtube.com/results?search_query=ethical+hacking+for+beginners" target="_blank" rel="noopener noreferrer" class="cyber-cta inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-black text-slate-950 shadow-[0_0_24px_rgba(124,255,138,0.35)]">ابدأ التعلم الآن</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="signup" class="bg-gradient-to-b from-slate-950 to-[#070b13] py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="glass neon-border overflow-hidden rounded-[2rem] p-8 lg:p-12">
+            <div class="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
+              <div class="flex flex-col justify-center">
+                <p class="text-sm font-semibold tracking-[0.2em] text-green-300">انضم إلى المجتمع التقني</p>
+                <h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">اشترك الآن وابدأ رحلتك في الأمن السيبراني</h2>
+                <p class="mt-5 text-lg text-slate-300 leading-8">
+                  احصل على الوصول إلى الدروس، الموارد، المشاريع، والمنتدى التقني المتخصص في الحماية الرقمية.
+                </p>
+                <div class="mt-6 flex items-center gap-3 text-sm text-slate-300">
+                  <span class="inline-block h-2.5 w-2.5 rounded-full bg-green-400 shadow-[0_0_12px_rgba(124,255,138,0.8)]"></span>
+                  تسجيل سريع، بدون تعقيد، وبدء فوري
+                </div>
+              </div>
+
+              <form class="rounded-[1.5rem] border border-slate-700 bg-slate-950/70 p-6 shadow-[0_0_30px_rgba(31,47,70,0.4)]" id="signupForm">
+                <div class="grid gap-5">
+                  <div>
+                    <label class="mb-2 block text-sm font-medium text-slate-200">الاسم الكامل</label>
+                    <input type="text" class="w-full rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30" placeholder="أدخل اسمك" required />
+                  </div>
+
+                  <div>
+                    <label class="mb-2 block text-sm font-medium text-slate-200">البريد الإلكتروني</label>
+                    <input type="email" class="w-full rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30" placeholder="name@example.com" required />
+                  </div>
+
+                  <div>
+                    <label class="mb-2 block text-sm font-medium text-slate-200">الاهتمام</label>
+                    <select class="w-full rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30">
+                      <option>أساسيات الشبكات</option>
+                      <option>اختبار التغلغل</option>
+                      <option>أمن الويب</option>
+                      <option>كل المسارات</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="mt-2 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-green-400 to-cyan-400 px-5 py-3 text-base font-bold text-slate-950 shadow-[0_0_24px_rgba(124,255,138,0.35)] transition hover:brightness-110">
+                    اشترك الآن
+                  </button>
+
+                  <p class="mt-2 text-center text-xs text-slate-400">جاهز للنشر والتوزيع عبر رابط مباشر</p>
+                  <p class="mt-2 text-center text-sm text-slate-300">للاشتراك السريع عبر واتساب أو اتصال: <a href="tel:779881132" class="text-green-300 font-bold">779881132</a> — أو تواصل عبر <a href="https://wa.me/779881132" target="_blank" rel="noopener noreferrer" class="text-cyan-300 font-semibold">واتساب</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+        <script>
+          // Configure a webhook URL that will forward signup details to WhatsApp (via Zapier/Make/Twilio)
+          // Example: paste your Zapier webhook URL here: https://hooks.zapier.com/hooks/catch/....
+          const WHATSAPP_WEBHOOK_URL = ""; // <-- add your webhook URL to enable automatic WhatsApp notifications
+
+          (function () {
+            const form = document.getElementById('signupForm');
+            if (!form) return;
+
+            form.addEventListener('submit', async function (e) {
+              e.preventDefault();
+
+              const name = (form.querySelector('input[type="text"]') || {}).value?.trim() || '';
+              const email = (form.querySelector('input[type="email"]') || {}).value?.trim() || '';
+              const sel = form.querySelector('select');
+              const interest = sel ? sel.value : '';
+
+              const payload = { name, email, interest, time: new Date().toISOString() };
+
+              // 1) Send to configured webhook (if any). Use this webhook to integrate with Twilio/Zapier/Make
+              if (WHATSAPP_WEBHOOK_URL) {
+                try {
+                  await fetch(WHATSAPP_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                  });
+                } catch (err) {
+                  console.error('Webhook POST failed', err);
+                }
+              }
+
+              // 2) Also attempt existing server endpoint, fallback to localStorage
+              try {
+                const res = await fetch('/api/signup', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(payload),
+                });
+                if (!res.ok) throw new Error('Server error');
+              } catch (err) {
+                const key = 'cybershield_signups';
+                const arr = JSON.parse(localStorage.getItem(key) || '[]');
+                arr.push(payload);
+                localStorage.setItem(key, JSON.stringify(arr));
+              }
+
+              // UX: show confirmation briefly
+              const btn = form.querySelector('button[type="submit"]');
+              if (btn) {
+                const orig = btn.innerHTML;
+                btn.innerHTML = 'تمّ التسجيل ✓';
+                setTimeout(() => (btn.innerHTML = orig), 2500);
+              }
+              form.reset();
+            });
+          })();
+        </script>
+
+    <!-- Modal Video Player -->
+    <div id="videoModal" class="fixed inset-0 z-60 hidden items-center justify-center bg-black/70">
+      <div class="w-full max-w-4xl p-4">
+        <div class="relative bg-[#07121b] rounded-lg overflow-hidden">
+          <button id="closeVideoModal" class="absolute right-3 top-3 z-10 rounded-full bg-slate-800/60 px-3 py-1 text-slate-200">✕</button>
+          <div class="aspect-w-16 aspect-h-9 bg-black">
+            <iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress Tracker & Leaderboard (client-side demo) -->
+    <div id="learningWidgets" class="fixed left-4 bottom-6 z-50 space-y-3">
+      <div id="progressPanel" class="glass rounded-xl border border-slate-700 p-3 w-64">
+        <div class="text-sm font-bold text-white">تتبع التقدم</div>
+        <div id="progressList" class="mt-2 text-slate-300 text-sm"></div>
+      </div>
+      <div id="leaderboardPanel" class="glass rounded-xl border border-slate-700 p-3 w-64">
+        <div class="text-sm font-bold text-white">لوحة المتصدرين</div>
+        <ol id="leaderboardList" class="mt-2 text-slate-300 text-sm list-decimal pl-4"></ol>
+      </div>
+    </div>
+
+    <footer class="border-t border-slate-800 bg-[#050a12] py-8">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-center text-sm text-slate-400 sm:px-6 lg:flex-row lg:text-right lg:px-8">
+        <p>© <span id="year"></span> CyberShield Academy. جميع الحقوق محفوظة.</p>
+        <div class="flex gap-5">
+          <a href="#about" class="transition hover:text-cyan-300">من نحن</a>
+          <a href="#courses" class="transition hover:text-cyan-300">المسارات</a>
+          <a href="#signup" class="transition hover:text-cyan-300">الاشتراك</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('signupForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const button = form.querySelector('button');
+        const formData = new FormData(form);
+        const payload = {
+          name: formData.get('name') || form.querySelector('input[type=text]')?.value || '',
+          email: formData.get('email') || form.querySelector('input[type=email]')?.value || '',
+          interest: form.querySelector('select')?.value || ''
+        };
+
+        // Try sending to backend endpoint (placeholder). If not available, fallback to local success.
+        button.textContent = 'جاري الإرسال...';
+        button.disabled = true;
+
+        fetch('/api/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).then(res => {
+          if (res.ok) return res.json();
+          throw new Error('backend-fail');
+        }).then(() => {
+          button.textContent = 'تم التسجيل بنجاح';
+          setTimeout(() => { button.textContent = 'اشترك الآن'; button.disabled = false; form.reset(); }, 1800);
+        }).catch(() => {
+          // Fallback: store locally and show confirmation
+          const users = JSON.parse(localStorage.getItem('cybershield_signups') || '[]');
+          users.push(payload);
+          localStorage.setItem('cybershield_signups', JSON.stringify(users));
+          button.textContent = 'تم التسجيل محليًا';
+          setTimeout(() => { button.textContent = 'اشترك الآن'; button.disabled = false; form.reset(); }, 1800);
+        });
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      document.querySelectorAll('.faq-toggle').forEach((button) => {
+        button.addEventListener('click', () => {
+          const item = button.parentElement;
+          item.classList.toggle('active');
+        });
+      });
+
+      // Video modal handlers
+      const videoModal = document.getElementById('videoModal');
+      const videoFrame = document.getElementById('videoFrame');
+      document.getElementById('openVideoDemo')?.addEventListener('click', (e) => {
+        const url = e.currentTarget.dataset.video;
+        if (!url) return;
+        videoFrame.src = url + '?autoplay=1&rel=0';
+        videoModal.classList.remove('hidden');
+        videoModal.classList.add('flex');
+      });
+      document.getElementById('closeVideoModal')?.addEventListener('click', () => {
+        videoFrame.src = '';
+        videoModal.classList.add('hidden');
+        videoModal.classList.remove('flex');
+      });
+
+      // Login button placeholder (open auth link)
+      document.getElementById('loginBtn')?.addEventListener('click', () => {
+        // Open a placeholder OAuth endpoint (implement on backend)
+        window.open('/auth/login', '_self');
+      });
+
+      // Course search/filter
+      const courseSearch = document.getElementById('courseSearch');
+      courseSearch?.addEventListener('input', (e) => {
+        const q = e.target.value.trim().toLowerCase();
+        document.querySelectorAll('#courses article').forEach(card => {
+          const text = card.innerText.toLowerCase();
+          card.style.display = text.includes(q) ? '' : 'none';
+        });
+      });
+
+      // Simple client-side progress tracker and leaderboard
+      function loadProgress() {
+        const progress = JSON.parse(localStorage.getItem('cybershield_progress') || '{}');
+        const list = document.getElementById('progressList');
+        list.innerHTML = '';
+        const defaultCourses = ['أساسيات الشبكات','اختبار التغلغل','أمن الويب'];
+        defaultCourses.forEach(c => {
+          const val = progress[c] || 0;
+          const el = document.createElement('div');
+          el.innerHTML = `<div class="flex items-center justify-between"><span>${c}</span><span>${val}%</span></div><div class="w-full bg-slate-800 rounded-full h-2 mt-1"><div style="width:${val}%" class="bg-green-400 h-2 rounded-full"></div></div>`;
+          list.appendChild(el);
+        });
+      }
+
+      function loadLeaderboard() {
+        const board = JSON.parse(localStorage.getItem('cybershield_leaderboard') || '[]');
+        const list = document.getElementById('leaderboardList');
+        list.innerHTML = '';
+        (board.slice(0,10)).forEach(u => {
+          const li = document.createElement('li');
+          li.textContent = `${u.name} — ${u.points || 0} pts`;
+          list.appendChild(li);
+        });
+      }
+
+      // Initialize demo data if missing
+      if (!localStorage.getItem('cybershield_progress')) {
+        localStorage.setItem('cybershield_progress', JSON.stringify({'أساسيات الشبكات':20,'اختبار التغلغل':5,'أمن الويب':0}));
+      }
+      if (!localStorage.getItem('cybershield_leaderboard')) {
+        localStorage.setItem('cybershield_leaderboard', JSON.stringify([{name:'محمد',points:320},{name:'سارة',points:280},{name:'ياسر',points:210}]));
+      }
+      loadProgress(); loadLeaderboard();
+    </script>
+  </body>
+</html>
